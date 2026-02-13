@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test API</title>
+</head>
+<body>
+    <h1>Testing API</h1>
+    <div id="result"></div>
+    <div id="images"></div>
+    
+    <script>
+        fetch('http://127.0.0.1:8000/api/cars/')
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById('result').innerHTML = '<pre>' + JSON.stringify(data, null, 2) + '</pre>';
+                
+                const results = data.results || data;
+                results.forEach(car => {
+                    const img = document.createElement('img');
+                    img.src = car.hero_image;
+                    img.style.width = '300px';
+                    img.onerror = () => console.error('Failed to load:', car.hero_image);
+                    img.onload = () => console.log('Loaded:', car.hero_image);
+                    document.getElementById('images').appendChild(img);
+                });
+            })
+            .catch(err => {
+                document.getElementById('result').innerHTML = 'Error: ' + err;
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loading-content {
+  text-align: center;
+}
+
+.toyota-logo-loader {
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: 0.3em;
+  color: var(--toyota-red);
+  margin-bottom: 3rem;
+}
+
+.progress-bar {
+  width: 300px;
+  height: 2px;
+  background: var(--light-grey);
+  margin: 0 auto 1rem;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--toyota-red);
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 0.9rem;
+  color: var(--silver);
+  letter-spacing: 0.2em;
+}

@@ -1,0 +1,178 @@
+.model-detail {
+  padding-top: 80px;
+}
+
+.detail-hero {
+  position: relative;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.detail-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detail-hero-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 4rem 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+}
+
+.detail-hero h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+}
+
+.detail-hero p {
+  font-size: 1.2rem;
+  color: var(--toyota-red);
+  letter-spacing: 0.2em;
+  margin-top: 1rem;
+}
+
+.specs-section {
+  padding: 8rem 0;
+  background: var(--dark-grey);
+}
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.spec-item {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: var(--light-grey);
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: all 0.3s ease;
+}
+
+.spec-item:hover {
+  border-color: var(--toyota-red);
+  transform: translateY(-5px);
+}
+
+.spec-value {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--toyota-red);
+  margin-bottom: 1rem;
+}
+
+.spec-label {
+  font-size: 0.9rem;
+  color: var(--silver);
+  letter-spacing: 0.15em;
+}
+
+.description-section {
+  padding: 8rem 0;
+}
+
+.description-text {
+  font-size: 1.2rem;
+  line-height: 2;
+  color: var(--silver);
+  max-width: 900px;
+  margin: 3rem auto 0;
+  text-align: center;
+}
+
+.gallery-section {
+  padding: 8rem 0;
+  background: var(--dark-grey);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.gallery-item {
+  height: 300px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.test-drive-section {
+  padding: 8rem 0;
+}
+
+.test-drive-form {
+  max-width: 800px;
+  margin: 4rem auto 0;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.test-drive-form input,
+.test-drive-form textarea {
+  width: 100%;
+  padding: 1.2rem;
+  background: var(--dark-grey);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--white);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.test-drive-form input:focus,
+.test-drive-form textarea:focus {
+  outline: none;
+  border-color: var(--toyota-red);
+}
+
+.test-drive-form textarea {
+  margin-bottom: 2rem;
+  resize: vertical;
+}
+
+.test-drive-form button {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .specs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .detail-hero h1 {
+    font-size: 3rem;
+  }
+}
